@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Elite Consultancy</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #0a3d62;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hero {
+      background: url('images/pexels-expect-best-79873-323705.jpg') center/cover;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .hero button {
+      padding: 10px 20px;
+      margin-top: 15px;
+      background-color: #1e90ff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .services-container, .projects-container, .leadership-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .service-card, .project-card, .leader-card {
+      background-color: white;
+      padding: 20px;
+      width: 280px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .leader-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    footer {
+      background-color: #0a3d62;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #0a3d62;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Elite Consultancy</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#leadership">Leadership</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <h2>Your Trusted Business Advisor</h2>
+    <p>Helping businesses grow with expert advice.</p>
+    <button onclick="scrollToSection('projects')">Get In Touch</button>
+    <button class="back-to-top" onclick="scrollToSection('home')">↑ Top</button>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>We are a professional consultancy firm offering strategic, financial, and marketing solutions for startups and enterprises.</p>
+  </section>
+
+  <section id="leadership">
+    <h2>Our Leadership</h2>
+    <div class="leadership-container">
+      <div class="leader-card">
+        <img src="images/boy.jpg" alt="CEO Photo">
+        <h3>Irasubiza Christian</h3>
+        <p><strong>Founder & CEO</strong></p>
+        <p>Christian is the visionary behind Elite Consultancy, with 15+ years of experience in global business strategy and entrepreneurship.</p>
+      </div>
+      <div class="leader-card">
+        <img src="images/IMG-20250419-WA0003.jpg" alt="CTO Photo">
+        <h3>Chriss</h3>
+        <p><strong>Chief Technology Officer</strong></p>
+        <p>Chriss leads our technology strategy, ensuring innovative and efficient solutions for our clients across industries.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="services-container">
+      <div class="service-card">
+        <h3>Business Strategy</h3>
+        <p>Tailored plans to grow your business sustainably.</p>
+      </div>
+      <div class="service-card">
+        <h3>Financial Planning</h3>
+        <p>Get control over budgeting, forecasting, and investments.</p>
+      </div>
+      <div class="service-card">
+        <h3>Marketing Consulting</h3>
+        <p>Drive engagement through digital and offline channels.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Our Projects</h2>
+    <div class="projects-container">
+      <div class="project-card">
+        <h3>Startup Launch Strategy</h3>
+        <p>Guided a tech startup from ideation to market with full-scale strategy and investor pitch support.</p>
+      </div>
+      <div class="project-card">
+        <h3>Retail Expansion</h3>
+        <p>Helped a regional retailer expand to 15+ new locations with market and financial feasibility analysis.</p>
+      </div>
+      <div class="project-card">
+        <h3>Digital Transformation</h3>
+        <p>Modernized operations for a logistics firm using cloud solutions and CRM integration.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Elite Consultancy. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function scrollToSection(sectionId) {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  </script>
+</body>
+</html>
